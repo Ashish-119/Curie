@@ -1,0 +1,25 @@
+# Virtual environments
+.venv/
+.venv-mac/
+.venv-1/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Personal data & secrets — never commit these
+.env
+data/
+memory/long_term.json
+
+# Legacy/bloat, not part of the repo
+Mark-XXXIX-main.zip
+OllamaSetup.exe
+
+# IDE / tooling
+.claude/
+.vscode/

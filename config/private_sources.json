@@ -1,0 +1,48 @@
+{
+  "comment": "Add your private URLs below. Curie checks these BEFORE searching the internet. Set requires_auth:true for login-protected / JavaScript-heavy sites.",
+  "sources": [
+    {
+      "url": "https://app.sitdeck.com/",
+      "description": "Sitdeck dashboard \u2014 news and information",
+      "requires_auth": true,
+      "topics": [
+        "world news",
+        "happening around the world",
+        "international news",
+        "global events",
+        "current events",
+        "bitcoin prices",
+        "what is happening",
+        "news today",
+        "latest news",
+        "breaking news",
+        "politics",
+        "war",
+        "conflict",
+        "economy",
+        "finance",
+        "market",
+        "crypto",
+        "stocks",
+        "technology news",
+        "science news",
+        "sports news",
+        "headline",
+        "around world",
+        "tell me news",
+        "what happened",
+        "top stories",
+        "business news",
+        "india news",
+        "america news",
+        "europe news",
+        "update today",
+        "daily news",
+        "morning news",
+        "evening news"
+      ],
+      "refresh_hours": 0.1,
+      "max_content_chars": 8000
+    }
+  ]
+}

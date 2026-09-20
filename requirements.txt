@@ -1,0 +1,50 @@
+# ── Curie local engine ────────────────────────────────
+faster-whisper
+sounddevice
+numpy
+scipy                          # TTS resampling (engine/tts.py)
+webrtcvad-wheels
+ollama
+kokoro
+soundfile
+
+# ── Memory & vector store ─────────────────────────────
+mempalace                      # local long-term memory backend (engine/memory/palace.py)
+chromadb                       # storage engine underneath mempalace
+
+# ── Wake word ─────────────────────────────────────────
+openwakeword                  # free, fully local (no Porcupine key needed)
+
+# ── Web search (DDG, no cloud LLM) ───────────────────
+ddgs                            # actively maintained; package was renamed from duckduckgo-search
+duckduckgo-search               # kept as a fallback import (actions/web_search.py tries both)
+
+# ── Dev mode: strong cloud AI for "build me a website" requests (opt-in) ──
+anthropic                       # Claude, used only when ANTHROPIC_API_KEY is set (actions/dev_builder.py)
+
+# ── Gmail integration (read/search/send) ──────────────
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+httplib2
+
+# ── Reused Jarvis chassis ─────────────────────────────
+pyqt6
+pillow
+playwright
+pyautogui
+pyperclip
+psutil
+requests
+beautifulsoup4
+feedparser
+send2trash
+python-pptx
+plyer                          # cross-platform desktop notifications (actions/reminder.py)
+
+# ── Windows-only (environment marker auto-skips these on macOS/Linux) ──
+win10toast; sys_platform == "win32"      # toast notifications (actions/reminder.py)
+comtypes; sys_platform == "win32"        # required by pycaw
+pycaw; sys_platform == "win32"           # system volume control (actions/computer_settings.py)
+pywin32; sys_platform == "win32"         # reserved for a planned resume-event service (not yet used)
